@@ -1,7 +1,5 @@
 
 public class Animal {
-	
-
 		
 	private String name;
 	private boolean sex;
@@ -11,7 +9,6 @@ public class Animal {
 	private boolean hungry;
 	private boolean sleep;
 	private boolean health;
-	
 
 	public Animal() {}
 
@@ -27,8 +24,6 @@ public class Animal {
 		this.health = health;
 	}
 	
-
-
 	// methodes
 
 	public String getName() {
