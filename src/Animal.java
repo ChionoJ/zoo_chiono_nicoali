@@ -24,6 +24,8 @@ public class Animal {
 		this.health = health;
 	}
 	
+	
+	
 	// methodes
 
 	public String getName() {
@@ -107,6 +109,7 @@ public class Animal {
 
 	}
 	
+
 	
 	
 
