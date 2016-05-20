@@ -97,9 +97,6 @@ public class Animal {
 	public void setHealth(boolean health) {
 		this.health = health;
 	}
-
-
-
 	
 	public static void eat(Animal animal){
 		if (animal.isSleep() == false)
