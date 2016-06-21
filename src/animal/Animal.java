@@ -2,22 +2,19 @@
 package animal;
 
 public class Animal {
-
+		
 	private String name;
 	private boolean sex;
-	private float weight;
-	private float height;
+	private double weight;
+	private int height;
 	private int age;
 	private boolean hungry;
-	private String scream;
 	private boolean sleep;
 	private boolean health;
 
-	public Animal() {
-	}
+	public Animal() {}
 
-	public Animal(String name, boolean sex, float weight, float height, int age, boolean hungry, String scream,
-			boolean sleep, boolean health) {
+	public Animal(String name, boolean sex, double weight, int height, int age, boolean hungry, boolean sleep, boolean health) {
 		super();
 		this.name = name;
 		this.sex = sex;
@@ -25,46 +22,47 @@ public class Animal {
 		this.height = height;
 		this.age = age;
 		this.hungry = hungry;
-		this.scream = scream;
 		this.sleep = sleep;
 		this.health = health;
 	}
-
+	
+	
+	
 	// methodes
 
 	public String getName() {
 		return name;
 	}
 
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 
 	public boolean isSex() {
 		return sex;
 	}
 
+
 	public void setSex(boolean sex) {
 		this.sex = sex;
 	}
 
-	public float getWeight() {
+
+	public double getWeight() {
 		return weight;
 	}
 
-	public void setWeight(float weight) {
+	public void setWeight(double weight) {
 		this.weight = weight;
 	}
 
-	public float getHeight() {
+	public int getHeight() {
 		return height;
 	}
 
-	public String getScream() {
-		return scream;
-	}
-
-	public void setHeight(float height) {
+	public void setHeight(int height) {
 		this.height = height;
 	}
 
@@ -99,35 +97,23 @@ public class Animal {
 	public void setHealth(boolean health) {
 		this.health = health;
 	}
-
-	public static void eat(Animal animal) {
-		if (!animal.isSleep()) {
+	
+	public static void eat(Animal animal){
+		if (animal.isSleep() == false)
+		{
 			animal.setHungry(false);
 			System.out.println("Mange");
-		} else
-			System.out.println("Ne peut pas manger");
+		}
+		else System.out.println("Ne peut pas manger");
+
 	}
+	
 
-	public static String scream(Animal animal) {
+	
+	
 
-		return animal.getScream();
-	}
 
-	public static void wakeUp(Animal animal) {
+	
 
-		if (animal.isSleep()) {
-			animal.setSleep(false);
-			System.out.println("Se Reveille");
-		} else
-			System.out.println("Ne dors pas");
-	}
-
-	public static void heal(Animal animal) {
-		if (!animal.isHealth()) {
-			animal.setHealth(true);
-			System.out.println("N'est plus malade");
-		} else
-			System.out.println("N'est pas malade");
-	}
 
 }
